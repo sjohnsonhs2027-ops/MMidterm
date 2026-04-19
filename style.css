@@ -328,6 +328,55 @@ nav a:hover {
   background: linear-gradient(135deg, #c94872, #ff84a5);
 }
 
+/* Before & After */
+.before-after {
+  background: linear-gradient(180deg, #fafafe 0%, #ffffff 100%);
+}
+
+.subheading {
+  margin: 2rem 0 1rem;
+  font-size: 1.4rem;
+  color: var(--heading);
+}
+
+.before-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.before-img {
+  height: 250px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.before-img:hover {
+  transform: scale(1.02);
+}
+
+.after-wrapper {
+  margin-top: 1rem;
+}
+
+.after-img {
+  height: 380px;
+  border-radius: 24px;
+  background-image: url("your-ai-image.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+}
+
+.after-text {
+  margin-top: 1rem;
+  max-width: 720px;
+  color: var(--text-light);
+}
+
 /* Spotlight */
 .spotlight {
   background: #fff;
@@ -489,5 +538,17 @@ nav a:hover {
 
   .tile {
     min-height: 220px;
+  }
+
+  .before-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .before-img {
+    height: 220px;
+  }
+
+  .after-img {
+    height: 260px;
   }
 }
