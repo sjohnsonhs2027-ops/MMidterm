@@ -10,6 +10,7 @@
   --accent: #5f6fff;
   --accent-2: #8a7dff;
   --shadow: 0 18px 45px rgba(30, 30, 50, 0.08);
+  --shadow-soft: 0 10px 25px rgba(30, 30, 50, 0.06);
   --radius: 22px;
   --max-width: 1180px;
 }
@@ -113,9 +114,11 @@ nav a:hover {
   position: relative;
   padding: 8rem 0 6rem;
   background:
-    radial-gradient(circle at top left, rgba(95, 111, 255, 0.12), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(138, 125, 255, 0.12), transparent 30%),
-    linear-gradient(180deg, #fbfbfd 0%, #ffffff 100%);
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.82)),
+    url("https://i.pinimg.com/originals/da/23/97/da2397e45373d909dee8278116968f06.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero::after {
@@ -255,6 +258,37 @@ nav a:hover {
   color: var(--text-light);
 }
 
+/* Problem */
+.problem {
+  background: var(--bg-soft);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.problem-card {
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.problem-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--heading);
+  font-size: 1.25rem;
+}
+
+.problem-card p {
+  margin: 0;
+  color: var(--text-light);
+}
+
 /* Tiles */
 .tiles-section {
   background: linear-gradient(180deg, #ffffff 0%, #fafafe 100%);
@@ -328,6 +362,65 @@ nav a:hover {
   background: linear-gradient(135deg, #c94872, #ff84a5);
 }
 
+/* Proposal */
+.proposal {
+  background: #fff;
+}
+
+.proposal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.proposal-card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #ffffff, #f8f8fe);
+  box-shadow: var(--shadow);
+}
+
+.proposal-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--heading);
+}
+
+.proposal-card p {
+  margin: 0;
+  color: var(--text-light);
+}
+
+/* Options */
+.options {
+  background: linear-gradient(180deg, #fafafe 0%, #ffffff 100%);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.option-card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.option-card.selected {
+  background: linear-gradient(135deg, #eef0ff, #ffffff);
+  border-color: rgba(95, 111, 255, 0.18);
+}
+
+.option-card h3 {
+  margin-top: 0;
+  color: var(--heading);
+}
+
 /* Before & After */
 .before-after {
   background: linear-gradient(180deg, #fafafe 0%, #ffffff 100%);
@@ -339,36 +432,45 @@ nav a:hover {
   color: var(--heading);
 }
 
-.before-gallery {
+.before-gallery,
+.after-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
-.before-img {
-  height: 250px;
+.before-img,
+.after-img {
+  position: relative;
+  min-height: 280px;
   border-radius: 20px;
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-.before-img:hover {
+.before-img:hover,
+.after-img:hover {
   transform: scale(1.02);
 }
 
-.after-wrapper {
-  margin-top: 1rem;
+.after-img {
+  min-height: 340px;
+  border-radius: 24px;
 }
 
-.after-img {
-  height: 380px;
-  border-radius: 24px;
-  background-image: url("your-ai-image.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: var(--shadow);
+.img-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #fff;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78));
 }
 
 .after-text {
@@ -423,6 +525,101 @@ nav a:hover {
 
 .spotlight-panel li + li {
   margin-top: 0.8rem;
+}
+
+/* Budget */
+.budget {
+  background: var(--bg-soft);
+}
+
+.budget-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  overflow: hidden;
+}
+
+.budget-table th,
+.budget-table td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.budget-table th {
+  background: #f4f5ff;
+  color: var(--heading);
+  font-size: 0.95rem;
+}
+
+.budget-table td {
+  color: var(--text-light);
+}
+
+/* Metrics */
+.metrics {
+  background: #fff;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.metric-card {
+  padding: 1.6rem;
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.metric-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: var(--heading);
+}
+
+.metric-card p {
+  margin: 0;
+  color: var(--text-light);
+}
+
+/* AI Reflection */
+.ai-reflection {
+  background: linear-gradient(180deg, #ffffff 0%, #fafafe 100%);
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ai-card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.ai-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--heading);
+}
+
+.ai-card p {
+  margin: 0;
+  color: var(--text-light);
 }
 
 /* Callout */
@@ -496,14 +693,24 @@ nav a:hover {
   }
 
   .intro-grid,
+  .problem-grid,
+  .proposal-grid,
   .tiles,
   .spotlight-grid,
-  .footer-grid {
+  .footer-grid,
+  .ai-grid,
+  .metrics-grid,
+  .options-grid {
     grid-template-columns: 1fr;
   }
 
   .hero {
     padding: 6rem 0 4.5rem;
+  }
+
+  .before-gallery,
+  .after-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -531,8 +738,12 @@ nav a:hover {
   }
 
   .intro-card,
+  .problem-card,
+  .proposal-card,
+  .option-card,
   .spotlight-panel,
-  .callout-box {
+  .callout-box,
+  .ai-card {
     padding: 1.5rem;
   }
 
@@ -540,15 +751,17 @@ nav a:hover {
     min-height: 220px;
   }
 
-  .before-gallery {
-    grid-template-columns: 1fr;
-  }
-
   .before-img {
-    height: 220px;
+    min-height: 220px;
   }
 
   .after-img {
-    height: 260px;
+    min-height: 260px;
+  }
+
+  .budget-table th,
+  .budget-table td {
+    font-size: 0.92rem;
+    padding: 0.9rem;
   }
 }
