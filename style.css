@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg: #f4f8ff;
-  --bg-soft: #eaf2ff;
-  --text: #1f2f4a;
-  --text-light: #4f6485;
-  --heading: #10203a;
-  --border: rgba(16, 32, 58, 0.12);
-  --accent: #0066ff;
-  --accent-2: #3aa0ff;
-  --shadow: 0 18px 45px rgba(0, 75, 180, 0.12);
+  --bg: #ffffff;
+  --bg-soft: #f6f6f8;
+  --text: #3d3d46;
+  --text-light: #6c6c78;
+  --heading: #22232b;
+  --border: rgba(34, 35, 43, 0.08);
+  --accent: #5f6fff;
+  --accent-2: #8a7dff;
+  --shadow: 0 18px 45px rgba(30, 30, 50, 0.08);
   --radius: 22px;
   --max-width: 1180px;
 }
@@ -44,7 +44,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(244, 248, 255, 0.9);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
@@ -107,14 +107,14 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: var(--heading);
 }
 
 /* Hero */
 .hero {
   position: relative;
   padding: 8rem 0 6rem;
-  background-image: url('https://i.pinimg.com/originals/41/d0/bb/41d0bb122a781f702c5987794f5f39ff.gif');
+  background-image: url('https://i.pinimg.com/originals/da/23/97/da2397e45373d909dee8278116968f06.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,9 +125,9 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(5, 20, 55, 0.62), rgba(5, 20, 55, 0.62)),
-    radial-gradient(circle at top left, rgba(0, 102, 255, 0.28), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(58, 160, 255, 0.22), transparent 30%);
+    linear-gradient(rgba(15, 16, 25, 0.58), rgba(15, 16, 25, 0.58)),
+    radial-gradient(circle at top left, rgba(95, 111, 255, 0.22), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(138, 125, 255, 0.2), transparent 30%);
 }
 
 .hero::after {
@@ -161,7 +161,7 @@ nav a:hover {
 }
 
 .hero .eyebrow {
-  color: #cfe0ff;
+  color: #c9d0ff;
 }
 
 .hero h1 {
@@ -176,7 +176,7 @@ nav a:hover {
   max-width: 760px;
   margin: 1.5rem 0 0;
   font-size: 1.15rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.88);
 }
 
 .hero-buttons {
@@ -194,8 +194,8 @@ nav a:hover {
   min-height: 3.4rem;
   padding: 0 1.4rem;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
   font-weight: 700;
   color: #fff;
@@ -205,7 +205,7 @@ nav a:hover {
 .button:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-  border-color: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.35);
 }
 
 .button.primary {
@@ -257,7 +257,7 @@ nav a:hover {
 }
 
 .intro-card.large {
-  background: linear-gradient(135deg, #ffffff, #edf4ff);
+  background: linear-gradient(135deg, #ffffff, #f7f7fc);
 }
 
 .intro-card h3 {
@@ -274,7 +274,7 @@ nav a:hover {
 
 /* Problem */
 .problem {
-  background: linear-gradient(180deg, #edf5ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fafafe 0%, #ffffff 100%);
 }
 
 .problem-grid {
@@ -305,7 +305,7 @@ nav a:hover {
 
 /* Existing features tiles */
 .tiles-section {
-  background: linear-gradient(180deg, #ffffff 0%, #eef4ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fafafe 100%);
 }
 
 .tiles {
@@ -353,27 +353,27 @@ nav a:hover {
 }
 
 .tile-a {
-  background: linear-gradient(135deg, #0b4fd6, #5ea2ff);
+  background: linear-gradient(135deg, #3a4ed5, #7a8cff);
 }
 
 .tile-b {
-  background: linear-gradient(135deg, #1458ff, #73b5ff);
+  background: linear-gradient(135deg, #7b59ff, #b094ff);
 }
 
 .tile-c {
-  background: linear-gradient(135deg, #0f74b8, #56c3ff);
+  background: linear-gradient(135deg, #178a6a, #52c49b);
 }
 
 .tile-d {
-  background: linear-gradient(135deg, #2b6cff, #8cc4ff);
+  background: linear-gradient(135deg, #ff7b54, #ffb36b);
 }
 
 .tile-e {
-  background: linear-gradient(135deg, #12315f, #3d70b8);
+  background: linear-gradient(135deg, #3b3d4d, #6a7085);
 }
 
 .tile-f {
-  background: linear-gradient(135deg, #0072ff, #63b3ff);
+  background: linear-gradient(135deg, #c94872, #ff84a5);
 }
 
 /* Proposal */
@@ -390,7 +390,7 @@ nav a:hover {
 .proposal-card {
   padding: 2rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #ffffff, #eef5ff);
+  background: linear-gradient(135deg, #ffffff, #f6f7ff);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -409,7 +409,7 @@ nav a:hover {
 
 /* Before & After */
 .before-after {
-  background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fafafe 0%, #ffffff 100%);
 }
 
 .subheading {
@@ -474,14 +474,14 @@ nav a:hover {
 .comparison-card {
   padding: 2rem;
   border-radius: var(--radius);
-  background: #f3f8ff;
+  background: #f8f8fc;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
 .comparison-card.selected {
-  background: linear-gradient(135deg, #dcecff, #ffffff);
-  border: 1px solid rgba(0, 102, 255, 0.25);
+  background: linear-gradient(135deg, #edf0ff, #ffffff);
+  border: 1px solid rgba(95, 111, 255, 0.25);
 }
 
 .comparison-card h3 {
@@ -501,7 +501,7 @@ nav a:hover {
 /* Tables */
 .budget,
 .metrics {
-  background: linear-gradient(180deg, #ffffff 0%, #eef4ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fafafe 100%);
 }
 
 .budget-table-wrap {
@@ -526,7 +526,7 @@ nav a:hover {
 }
 
 .budget-table th {
-  background: #eaf2ff;
+  background: #f5f6fc;
   color: var(--heading);
   font-size: 0.95rem;
 }
@@ -548,7 +548,7 @@ nav a:hover {
 .reflection-box {
   padding: 2rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #edf4ff, #ffffff);
+  background: linear-gradient(135deg, #f7f8ff, #ffffff);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -590,7 +590,7 @@ nav a:hover {
 .spotlight-panel {
   padding: 2rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #edf4ff, #ffffff);
+  background: linear-gradient(135deg, #f7f8ff, #ffffff);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -619,14 +619,14 @@ nav a:hover {
 .callout-box {
   padding: 3rem;
   border-radius: 32px;
-  background: linear-gradient(135deg, #0d2d63, #1d5fd1);
+  background: linear-gradient(135deg, #1f2230, #343955);
   color: #fff;
   box-shadow: var(--shadow);
   text-align: center;
 }
 
 .callout-box .eyebrow {
-  color: #bfd8ff;
+  color: #b9c1ff;
 }
 
 .callout-box h2 {
@@ -638,13 +638,13 @@ nav a:hover {
 .callout-box p {
   max-width: 760px;
   margin: 0 auto 1.5rem;
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.85);
 }
 
 /* Footer */
 #footer {
   padding: 4rem 0 2rem;
-  background: #edf4ff;
+  background: #f7f7fb;
   border-top: 1px solid var(--border);
 }
 
@@ -667,7 +667,7 @@ nav a:hover {
 .copyright {
   margin: 2rem auto 0;
   width: min(100% - 3rem, var(--max-width));
-  color: #6b82a8;
+  color: #9b9baa;
   font-size: 0.9rem;
   text-align: left;
 }
